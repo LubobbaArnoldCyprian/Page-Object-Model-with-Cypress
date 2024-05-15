@@ -1,6 +1,4 @@
 
-// import 'cypress-xpath';
-
 class Automation {
 
     // Locators
