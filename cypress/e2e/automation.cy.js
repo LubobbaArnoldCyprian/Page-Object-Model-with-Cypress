@@ -1,4 +1,4 @@
-import Automation from "../pageObjects/login_page/loginpage_objects";
+import Login from "../pageObjects/login_page/loginpage_objects";
 import Checkout from "../pageObjects/checkout_page/checkoutpage_objects";
 import Items from "../pageObjects/featuredItems_page/featuredItems_objects"
 // import 'cypress-xpath';
@@ -6,7 +6,7 @@ import Items from "../pageObjects/featuredItems_page/featuredItems_objects"
 
 describe('Automation Assesment', () => {
 
-    const automation = new Automation();
+    const login = new Login();
     const checkout = new Checkout()
     const items = new Items()
 
@@ -24,10 +24,10 @@ describe('Automation Assesment', () => {
 
         cy.fixture('data').then((data) => {
 
-            automation.click_login_home_page();
-            automation.set_email(data.email);
-            automation.set_password(data.password);
-            automation.click_login_button();
+            login.click_login_home_page();
+            login.set_email(data.email);
+            login.set_password(data.password);
+            login.click_login_button();
 
             checkout.click_women_button();
             checkout.click_dress_button();

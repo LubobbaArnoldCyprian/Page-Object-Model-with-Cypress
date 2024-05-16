@@ -1,5 +1,5 @@
 
-class Automation {
+class Login {
 
     // Locators
     signUpLoginBtn = ".fa.fa-lock";
@@ -27,5 +27,5 @@ class Automation {
 
 }
 
-export default Automation;
+export default Login;
 
