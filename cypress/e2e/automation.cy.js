@@ -12,19 +12,22 @@ describe('Automation Assesment', () => {
 
     beforeEach(() => {
         cy.visit('/');
+
+    });
+
+    it('Featured Items', () => {
+        items.select_all_prices()
+
+    })
+
+    it('Login and Checkout the fancy green top & Summer White top', () => {
+
         cy.fixture('data').then((data) => {
 
             automation.click_login_home_page();
             automation.set_email(data.email);
             automation.set_password(data.password);
             automation.click_login_button();
-        });
-    });
-
-
-    it('Checkout fancy green top and Summer White top', () => {
-
-        cy.fixture('data').then((data) => {
 
             checkout.click_women_button();
             checkout.click_dress_button();
@@ -32,14 +35,9 @@ describe('Automation Assesment', () => {
             checkout.click_top_button();
             checkout.add_greenTop()
             checkout.add_summerWhiteTop()
-            checkout.checkout()
+            checkout.checkout(data.order_placed, data.card_name, data.card_number, data.card_cvc, data.card_expiry_date_month, data.card_expiry_date_year, data.assert_order, data.assert_checkout, data.assert_cart_link)
 
         });
-    })
-
-    it('Featured Items', () => {
-        items.select_all_prices()
-
     })
 
 

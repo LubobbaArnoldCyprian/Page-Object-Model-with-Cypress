@@ -1,15 +1,17 @@
 class Items {
 
-    priceLocators = '.features_items > > .product-image-wrapper > .single-products > .productinfo > h2'
+    gridProducts = '.single-products'
+    productNameText = '.productinfo.text-center>p'
+    productPriceText = '.productinfo.text-center>h2'
 
 
     select_all_prices() {
         let products = [];
 
-        cy.get('.single-products').each(($product, index) => {
+        cy.get(this.gridProducts).each(($product) => {
             // Extract product name
-            const productName = $product.find('.productinfo.text-center>p').text().trim();
-            const productPriceText = $product.find('.productinfo.text-center>h2').text().trim();
+            const productName = $product.find(this.productNameText).text().trim();
+            const productPriceText = $product.find(this.productPriceText).text().trim();
             const productPrice = parseFloat(productPriceText.replace('Rs.', ''));
 
 

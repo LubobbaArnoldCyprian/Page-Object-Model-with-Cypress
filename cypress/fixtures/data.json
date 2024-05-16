@@ -1,4 +1,17 @@
 {
   "email": "qat@mailinator.com",
-  "password": "123456"
+  "password": "123456",
+  "order_placed": "Order Placed Text Area",
+  
+  "card_name": "Test Card",
+  "card_number": "4100 0000 0000",
+  "card_cvc": "123",
+  "card_expiry_date_month": "01",
+  "card_expiry_date_year": "1900",
+
+  "assert_order":"Order Placed!",
+  "assert_checkout":"Proceed To Checkout",
+  "assert_cart_link":"Cart"
+
+
 }
