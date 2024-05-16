@@ -14,8 +14,6 @@ class Items {
             const productPriceText = $product.find(this.productPriceText).text().trim();
             const productPrice = parseFloat(productPriceText.replace('Rs.', ''));
 
-
-
             // Store the product name and price in an object and push it to the products array
             const product = {
                 name: productName,
@@ -33,8 +31,6 @@ class Items {
                 cy.log(`Product ${index + 1}: ${product.name} - ${product.price}`);
             });
         });
-
-
     }
 }
 export default Items

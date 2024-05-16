@@ -27,9 +27,6 @@ class Checkout {
     whitetopSelect = ":nth-child(5) > .product-image-wrapper > .choose > .nav > li > a"
 
 
-
-
-
     // checkout
     click_women_button() {
         cy.get(this.womenButton).click()
@@ -60,7 +57,6 @@ class Checkout {
         cy.get(this.addToCart).click()
         cy.get(this.addToCartSuccess).should('be.visible')
             .click()
-
     }
 
     checkout(order_placed, card_name, card_number, card_cvc, card_expiry_date_month, card_expiry_date_year, assert_order, assert_checkout, assert_cart_link) {
@@ -71,7 +67,6 @@ class Checkout {
         cart.click({ force: true })
 
         cy.scrollTo('right')
-        // cy.wait(4000)
         cy.get(this.navBarLinks).contains(assert_checkout)
             .should('be.visible')
             .click()
@@ -80,7 +75,6 @@ class Checkout {
             .click()
             .type(order_placed)
         cy.get(this.placeOrderButton).click()
-
 
         cy.get(this.cardNameField).click()
             .type(card_name)
@@ -97,5 +91,4 @@ class Checkout {
 
     }
 }
-
 export default Checkout
