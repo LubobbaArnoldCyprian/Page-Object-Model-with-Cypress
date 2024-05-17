@@ -1,28 +1,28 @@
+Here is the corrected markdown file:
+
 # onafriq-assignment
 
+## Page Object Model (POM) with Cypress
 
-```markdown
-# Page Object Model (POM) with Cypress
+### Introduction
 
-## Introduction
+Page Object Model (POM) is a design pattern used in test automation to create an object repository for storing web elements. In POM, each web page of an application is considered a class file. Each class file contains only the corresponding web page elements, and using these elements, operations can be performed on the application under test.
 
-Page Object Model (POM) is a design pattern used in test automation to create an object repository for storing web elements. In POM, each web page of an application is considered as a class file. Each class file contains only the corresponding web page elements, and using these elements, operations can be performed on the application under test.
-
-## Benefits of Page Object Model
+### Benefits of Page Object Model
 
 - **Reduces Code Duplication**: By encapsulating the page elements and their interactions within classes, the POM pattern minimizes redundancy in test scripts.
 - **Improves Test Case Maintenance**: Any changes to the web page's UI can be easily managed within the corresponding page class, ensuring that test cases do not need to be rewritten.
 - **Code Reusability**: Common operations can be reused across multiple test cases, promoting modularity.
 - **Enhances Readability and Reliability**: By organizing the code into clear, logical sections, POM makes the scripts easier to read and maintain.
 
-## Tools and Dependencies
+### Tools and Dependencies
 
 - **IDE**: Visual Studio Code
 - **Test Framework**: Cypress 13.9.0
 - **Node.js and npm**: Used for package management and running scripts.
 - **Programming Language**: JavaScript
 
-## Setting Up the Project Locally
+### Setting Up the Project Locally
 
 1. **Clone the Repository**:
    ```sh
@@ -34,7 +34,9 @@ Page Object Model (POM) is a design pattern used in test automation to create an
    - npm comes with Node.js, so it will be installed automatically.
 
 3. **Navigate to the Project Directory**:
-
+   ```sh
+   cd onafriq-assignment
+   ```
 
 4. **Install Node Modules**:
    ```sh
@@ -46,7 +48,7 @@ Page Object Model (POM) is a design pattern used in test automation to create an
    npm install cypress --save-dev
    ```
 
-## Running Tests
+### Running Tests
 
 - **Run Tests with GUI**:
   To run tests with the graphical user interface open:
@@ -55,11 +57,9 @@ Page Object Model (POM) is a design pattern used in test automation to create an
   ```
   A Cypress GUI will open where you can select and run specific tests.
 
- ## Test cases
+### Test Cases
 
-Test Case 1: Get the label and associated price of those item. Fetch them and sort it as per their price [Low to High] and print it on Console [Label & Price]
-
-Test Case2: SignIn and Checkout Order.
-
+- **Test Case 1**: Get the label and associated price of those items. Fetch them and sort by their price [Low to High] and print it on Console [Label & Price].
+- **Test Case 2**: Sign In and Checkout Order.
 
 ```
